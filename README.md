@@ -8,7 +8,7 @@ All it does is take 2 float params for input and outputs a result = sum(inputs)
 Install:
 ---
 
-    git clone git://github.com/saidinesh5/vsx.sample.module.git
+    git clone git://github.com/vovoid/vsxu-module.git
     cd vsx.sample.module
     mkdir build
     cd build
