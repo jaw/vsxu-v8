@@ -1,0 +1,6 @@
+[submodule "v8"]
+	path = v8
+	url = git://github.com/v8/v8
+[submodule "v8-gl"]
+	path = v8-gl
+	url = git://github.com/philogb/v8-gl.git

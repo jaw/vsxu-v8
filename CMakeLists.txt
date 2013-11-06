@@ -14,18 +14,28 @@ find_package(VSXu REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 
-include_directories( ${VSXU_INCLUDE_DIRS} )
-link_directories(${VSXu_LIBRARY_DIRS})
+include_directories( 
+  ${VSXU_INCLUDE_DIRS} 
+  v8/include
+)
+link_directories(
+${VSXu_LIBRARY_DIRS}
+${CMAKE_CURRENT_SOURCE_DIR}/v8/out/native/obj.target/tools/gyp/
+)
 
-set(SOURCES main.cpp vsx_sample_module.cpp)
+set(SOURCES main.cpp)
 add_library(${module_id} MODULE ${SOURCES})
 
 target_link_libraries(
   ${module_id}
+  libv8_base.x64.a
+  libv8_snapshot.a
   ${VSXU_LIBRARIES}
   ${GLEW_LIBRARY}
   ${OPENGL_LIBRARIES}
 )
+
+add_definitions(-fPIC)
 
 #Now Install the magic  files
 if(WIN32)

@@ -1,0 +1,4 @@
+add -fPIC to build/standalone.gypi
+
+cd v8
+make native
