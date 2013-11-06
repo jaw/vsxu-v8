@@ -1,9 +1,6 @@
-vsxu sample module
+vsxu v8 module (NOT working yet)
 ==================
 
-A Nice n Shiny Sample Module For VSXu. Fork it and Create More awesome modules :D
-
-All it does is take 2 float params for input and outputs a result = sum(inputs)
 
 Install:
 ---
